@@ -2,6 +2,8 @@
 
 This project provides an API using Azure Functions to retrieve resume data from Cosmos DB.
 
+`https://prajwalresumefunction.azurewebsites.net/api/resumeapi/?id=93bd0aec-5a87-43e6-9ae0-c6d67477614d`
+
 ## Features
 
 - Fetch specific resume sections (e.g., `basics`, `work`, `education`) or the entire resume.
