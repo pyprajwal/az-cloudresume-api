@@ -1,7 +1,3 @@
-Here's a concise version of your `README.md`:
-
----
-
 # Resume API with Azure Functions & Cosmos DB
 
 This project provides an API using Azure Functions to retrieve resume data from Cosmos DB.
@@ -24,9 +20,9 @@ This project provides an API using Azure Functions to retrieve resume data from 
 
 ```bash
 
-git clone https://github.com/yourusername/resume-api-cosmosdb.git
+git clone https://github.com/pyprajwal/az-cloudresume-api
 
-cd resume-api-cosmosdb
+cd az-cloudresume-api
 
 ```
 
@@ -51,23 +47,17 @@ pip install -r requirements.txt
 4\. **Create a `local.settings.json`** with Cosmos DB details:
 
 ```json
-
 {
+  "Values": {
+    "CosmosDB_URL": "<your-cosmos-db-url>",
 
-"Values": {
+    "CosmosDB_Key": "<your-cosmos-db-key>",
 
-"CosmosDB_URL": "<your-cosmos-db-url>",
+    "CosmosDB_Database": "<your-db-name>",
 
-"CosmosDB_Key": "<your-cosmos-db-key>",
-
-"CosmosDB_Database": "<your-db-name>",
-
-"CosmosDB_Container": "<your-container-name>"
-
+    "CosmosDB_Container": "<your-container-name>"
+  }
 }
-
-}
-
 ```
 
 5\. **Run locally**:
@@ -82,22 +72,12 @@ func start
 
 - **Fetch specific section**:
 
+`id=93bd0aec-5a87-43e6-9ae0-c6d67477614d`
+
+`section-name = ['basics', 'work', 'volunteer', 'education', 'awards', 'certificates', 'publications', 'skills', 'languages', 'interests', 'references', 'projects']`
+
 `GET http://localhost:7071/api/resumeapi?id=<resume-id>&section=<section-name>`
 
 - **Fetch entire resume**:
 
 `GET http://localhost:7071/api/resumeapi?id=<resume-id>`
-
-## Deployment
-
-- Deploy with Azure Functions Core Tools:
-
-```bash
-
-func azure functionapp publish <your-function-app-name>
-
-```
-
----
-
-This short `README.md` provides the essential steps to set up and use the API.
