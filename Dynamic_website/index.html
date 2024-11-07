@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajwal Pokhrel - IT Support Engineer</title>
+    <title>Prajwal Pokhrel - IT Engineer</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <button id="themeToggle">Toggle Dark Mode</button>
 
+
     <header>
         <h1>Prajwal Pokhrel</h1>
         <p>Sydney, NSW, Australia</p>
         <p>Email: prajwal.pokhrel63@gmail.com | Phone: +61456671987</p>
-        <p>IT Support Engineer | Azure Cloud Enthusiast | Customer-Focused Troubleshooter</p>
+        <p>Automation Enthusiast | IT Engineer | Customer-Focused Troubleshooter</p>
+        <br><p> <button id="terminalToggle"><a>Click here for CLI Resume</a></button></p>
     </header>
+    <div id="terminal">
+      <div id="output"></div>
+      <div id="input-line">
+          <span>$</span> <input type="text" id="command-input" autofocus />
+      </div>
+  </div>
 
     <nav>
         <a href="#experience">Experience</a>
@@ -24,26 +32,54 @@
         <a href="#certifications">Certifications</a>
     </nav>
 
-    <section id="profile">
+    <section id="main-content">
+      <section id="profile">
         <h2>Profile</h2>
         <p>Dedicated IT engineer excelling in various IT domains from end-user, system, network, and cloud service support. I bring the best ITIL practices, effective troubleshooting, a customer-centric approach, and a passion for technology.</p>
     </section>
 
     <section id="experience">
-        <h2>Experience</h2>
-        <div class="job">
-            <h3>IT Support Engineer (Part-time)</h3>
-            <p><strong>Axiom Technologies</strong> | Sydney, NSW (Jun 2023 - Present)</p>
-            <ul>
-                <li>Provide onsite support to end-users and coordinate with the remote infrastructure team.</li>
-                <li>Use Intune for Windows and software deployment on end-user devices.</li>
-                <li>Troubleshot policy issues, ensuring compliance and seamless operations.</li>
-                <li>Perform data center activities like racking and configuring network devices.</li>
-            </ul>
-        </div>
-        <!-- Add more job sections as needed -->
-    </section>
-
+      <h2>Experience</h2>
+      
+      <!-- Axiom Technologies Job -->
+      <div class="job">
+          <h3>IT Support Engineer (Part-time)</h3>
+          <p><strong>Axiom Technologies</strong> | Sydney, NSW (Jun 2023 - Present)</p>
+          <ul>
+              <li>Provide onsite support to end-users and coordinate with the remote infrastructure team.</li>
+              <li>Use Intune for Windows and software deployment on end-user devices.</li>
+              <li>Troubleshot policy issues, ensuring compliance and seamless operations.</li>
+              <li>Perform data center activities like racking and configuring network devices.</li>
+              <li>Liaised with vendors for support and procurement tasks.</li>
+          </ul>
+      </div>
+  
+      <!-- COTIVITI Inc Job -->
+      <div class="job">
+          <h3>Service Desk Engineer (L3)</h3>
+          <p><strong>COTIVITI Inc.</strong> | Kathmandu, Nepal (Apr 2019 - Nov 2019)</p>
+          <ul>
+              <li>Managed Active Directory and OKTA user accounts, ensuring synchronization with applications.</li>
+              <li>Administered Office 365, managing user access, licenses, and support requests.</li>
+              <li>Handled Exchange administration, configuring email flow, and distribution lists.</li>
+              <li>Used VMware Workspace ONE to manage end-user systems and resolve profile issues.</li>
+              <li>Led onboarding/offboarding processes, published knowledge articles, and tutorials.</li>
+              <li>Conducted bridge calls with stakeholders to resolve and prioritize critical issues.</li>
+          </ul>
+      </div>
+  
+      <!-- Standard Chartered Bank Job -->
+      <div class="job">
+          <h3>Desktop Support Engineer</h3>
+          <p><strong>Standard Chartered Bank</strong> | New-Baneshwor, Kathmandu, Nepal</p>
+          <ul>
+              <li>Installed and maintained desktop hardware/software, including updates and security patches.</li>
+              <li>Configured and supported computers, laptops, printers, scanners, and peripherals.</li>
+              <li>Executed Windows 10 migration across the headquarters and branch offices in Nepal.</li>
+          </ul>
+      </div>
+  </section>
+  
     <section id="education">
         <h2>Education</h2>
         <p>Bachelor in Electronics and Communication Engineering (2018)</p>
@@ -61,21 +97,57 @@
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Automatic Onboarder</h3>
-            <p>A project using Azure app design to automate user onboarding processes.</p>
-            <a href="https://github.com/pyprajwal/AZ104-PROJECTS/blob/master/automatic_onboarder/" target="_blank">View on GitHub</a>
-        </div>
-        <!-- Repeat project blocks for other projects -->
-    </section>
-
+      <h2>Projects</h2>
+      
+      <!-- Automatic Onboarder Project -->
+      <div class="project">
+          <h3>Automatic Onboarder</h3>
+          <p>This project demonstrates the use of Azure app design to automate user onboarding processes.</p>
+          <a href="https://github.com/pyprajwal/AZ104-PROJECTS/blob/master/automatic_onboarder/" target="_blank">View Project</a>
+      </div>
+  
+      <!-- Cloud API Resume Challenge Project -->
+      <div class="project">
+          <h3>Cloud API Resume Challenge</h3>
+          <p>This project provides an API using Azure Functions to retrieve resume data from Cosmos DB. 
+             Technologies used: Python, Azure Functions, Cosmos DB.</p>
+          <a href="https://github.com/pyprajwal/az-cloudresume-api" target="_blank">View Project</a>
+      </div>
+  
+      <!-- Cloudup Tool -->
+      <div class="project">
+          <h3>Cloudup Tool</h3>
+          <p>A command-line tool to manage Azure Blob storage operations, including listing blobs, uploading files, generating shareable links, and downloading files.
+             Technologies used: Bash scripting, Azure Blob, Azure SAS token.</p>
+          <a href="https://github.com/pyprajwal/AZ104-PROJECTS/blob/master/clouduploader/cloudup.md" target="_blank">View Project</a>
+      </div>
+  
+      <!-- File Share App -->
+      <div class="project">
+          <h3>File Share App</h3>
+          <p>This Flask application allows users to upload files to Azure Blob Storage. It provides a user-friendly interface for file uploads, displays links to uploaded files, and includes a feature for copying links to the clipboard.
+             Technologies used: Python Flask, Azure Blob, Azure Key Vault, Azure Web App.</p>
+          <a href="https://github.com/pyprajwal/AZ104-PROJECTS/tree/master/fileshareapp" target="_blank">View Project</a>
+      </div>
+  
+      <!-- Bicep VMfleet Project -->
+      <div class="project">
+          <h3>Bicep VMfleet</h3>
+          <p>This project contains Bicep templates for deploying multiple Azure Virtual Machines (VMs) with associated networking resources like Virtual Network, Subnet, Network Security Group, Network Interface, and Public IP Address.
+             Technologies used: Bicep, Infrastructure as Code (IaC).</p>
+          <a href="https://github.com/pyprajwal/AZ104-PROJECTS/blob/master/biceps/bicepvmfleet.md" target="_blank">View Project</a>
+      </div>
+  </section>
+  
     <section id="certifications">
         <h2>Certifications</h2>
         <ul>
             <li>CISCO CCNA (Cisco Certified Network Associate)</li>
             <li>Microsoft Azure Administrator Associate (Az-104)</li>
         </ul>
+        <br>
+        </section>
+
     </section>
 
     <footer>
