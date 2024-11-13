@@ -10,6 +10,7 @@ body {
   color: #333;
   background-color: #f7f7f7;
   line-height: 1.6;
+  text-align:justify;
 }
 
 /* Header */
@@ -36,6 +37,7 @@ nav a {
 
 nav a:hover {
   text-decoration:underline;
+
 }
 
 /* Section Styles */
